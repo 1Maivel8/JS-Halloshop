@@ -1,0 +1,267 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body{
+  background-color: rgb(38, 36, 36);
+}
+
+header{
+  height: 70px;
+  background: linear-gradient(45deg, #3c3b3b, #252424, #525050 , #433f3f);
+  cursor: pointer;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+}
+.container{
+  width: 80%;
+  margin: auto;
+}
+.header-content{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 70px;
+}
+.header-content nav ul{
+  display: flex;
+  list-style: none;
+}
+.Hallo{
+  text-decoration: none;
+  font-size: 35px;
+  color: rgb(168, 86, 27);
+  animation: horror 5s ease-out forwards;
+}
+@keyframes horror {
+  0% {
+    filter: blur(10px);
+    opacity: 0;
+  }
+  100% {
+    filter: blur(0px);
+    opacity: 1;
+  }
+}
+.header-content nav ul li a{
+  text-decoration: none;
+  font-size: 17px;
+  padding: 10px;
+  margin: 0 5px;
+  color: rgb(168, 86, 27);
+
+}
+
+#user-info{
+display: none;
+}
+
+.section-form{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  color: rgb(168, 86, 27);
+  text-align: center;
+  padding: 25px;
+  background-color: #3d3d3f;
+  border: 5px solid black;
+  box-shadow: 5px 5px 10px rgba(0,0,0,0.5);
+}
+
+.section-form form input{
+  display: block;
+  padding: 10px;
+  margin: 5px 0;
+  outline: none;
+  color: rgb(168, 86, 27);
+  transition: 1s;
+  cursor:help;
+
+ &:hover{
+  background-color: rgb(163, 163, 163);
+}
+}
+
+#submit:hover{
+background-image: url(../images/blood\ gif.gif);
+}
+
+.products{
+    margin-top: 10px;
+    display: flex;
+    flex-wrap: wrap;
+      justify-content: center;
+    gap:50px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.7);
+}
+
+.product-item:hover{
+background-color: #2e2e2f;
+  transform: scale(1.2);
+}
+.product-item{
+  display: flex;
+  border: 1px solid transparent;
+  animation: ColorChange 3s infinite alternate;
+  color:#8b8a8a;
+  min-height: 160px;
+  margin: 30px 0;
+  width: 550px;
+  transition: 2s;
+
+}
+p{
+  color: rgb(151, 63, 4);
+}
+@keyframes ColorChange {
+  0% {
+    border-color: #FF6F00;;
+  }
+  50% {
+    border-color: #8B0000;
+  }
+  100% {
+    border-color: #4B0082;
+  }
+}
+.product-item img{
+  width: 25%;
+  margin-right: 10px;
+  cursor: zoom-in;
+
+}
+.product-action{
+  flex: 1;
+  text-align:right;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+}
+.product-action .Add-to-cart{
+  width: 140px;
+  background-color: transparent;
+  padding: 10px;
+  margin-left: auto;
+  transition: 2s;
+  cursor: pointer;
+
+&:hover{
+  background-color: rgba(169, 89, 24, 0.584);
+   }
+}
+
+
+.product-desc{
+  line-height: 40px;
+}
+
+
+
+.cart{
+  margin: 0 15px;
+  position: relative;
+}
+.cart i{
+  font-size: 25px;
+
+}
+.cart .badge{
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-color: red;
+  color: #fff;
+  text-align: center;
+  top: -10px;
+  right: -10px;
+  display: none;
+
+}
+.viewproduct{
+  position: absolute;
+  width: 200px;
+  transform: translate(-40%, 22px);
+  text-align: center;
+  padding: 10px;
+  background-color: grey;
+  display: none;
+  border: 3px solid black;
+}
+.viewproduct a{
+  display: block;
+  background-color:rgb(0, 128, 0);
+  border-radius: 50%;
+}
+
+
+
+@media (max-width: 768px) {
+    .header-content {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 10px;
+     margin-top: -10px;
+    }
+      .product-item {
+    width: 100%;
+    flex-direction: column;
+    text-align: center;
+  }
+  .product-item img {
+    width: 100%;
+    margin: 0 0 10px 0;
+  }
+
+  .product-action {
+    align-items: center;
+  }
+ .viewproduct {
+   width: 90vw;
+   right: auto;  
+   top: 100%;
+   padding: 15px;
+  }
+}
+
+.box{
+   position: relative;
+
+ #Show{
+     display: none;
+     position: absolute;
+     width: 20px;
+     height: 20px;
+     right: 10px;
+     top: 4px;
+    appearance: none;
+    background-color: red;
+    }
+  #Show:checked{
+  background-color: green;
+}
+}
+
+.eye1 , .eye2{
+  position: absolute;
+  font-size: 25px;
+  right: 10px;
+   top: 5px;
+}
+.eye1{
+  display: none;
+}
+#Show:checked ~ .eye1{
+  display: block;
+ }
+ #Show:checked ~ .eye2{
+  display: none;
+ }
+ .images{
+  opacity: 0.3;
+ }
+
+
+
